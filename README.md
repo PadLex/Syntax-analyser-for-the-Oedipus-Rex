@@ -1,1 +1,1 @@
-# Syntax-analyser-for-the-Oedipus-Rex
+# Syntax analyser for the Oedipus Rex
