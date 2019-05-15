@@ -31,7 +31,6 @@ color_scheme = {
 for i, section in enumerate(section_map):
     section_map[section] += color_scheme[section.split()[0]]
 
-print(section_map)
 
 # Core averaging functions, lv 1
 def mean(sequence):
@@ -55,7 +54,7 @@ def maximum(sequence):
 
 def minimum(sequence):
     sequence = list(filter(None, sequence))
-    return max(sequence)
+    return min(sequence)
 
 
 # Graph averaging functions, lv 2
@@ -117,6 +116,15 @@ def exponential_decay(alpha=1, scale_type="approximate", scale_function=maximum)
         return x, y
 
     return exponential_decay_func
+
+
+def direct():
+    def direct_func(raw):
+        y = raw
+        x = np.arange(0, len(y))
+        return x, y
+
+    return direct_func
 
 
 # Optional wrapper functions, lv 3
